@@ -8,8 +8,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -17,7 +15,10 @@ concurrency:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/production'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v7
@@ -30,7 +31,11 @@ jobs:
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/production' && needs.build.result == 'success'
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

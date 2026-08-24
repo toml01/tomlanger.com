@@ -39,6 +39,8 @@ The site is built for the apex domain `tomlanger.com`. Astro `site` is set to `h
 
 The custom domain is configured in GitHub (**Settings → Pages → Custom domain**), not by a committed `CNAME` file. GitHub ignores repository `CNAME` files when Pages is published from Actions.
 
+Before attaching `tomlanger.com` in the repository Pages settings, verify the domain in the GitHub account Pages settings. GitHub provides a TXT record for that verification. Add it in DNS and leave it there so the domain stays verified.
+
 After the domain is saved in GitHub, point DNS at GitHub Pages:
 
 Apex `tomlanger.com` `A` records:
