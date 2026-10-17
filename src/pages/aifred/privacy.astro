@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="AIfred Privacy Policy" description="How AIfred accesses, uses, stores, and shares Google account data for its owner's personal assistant tasks." noIndex>
+  <h1>AIfred Privacy Policy</h1>
+  <p>Effective October 17, 2026. AIfred is a private personal AI assistant operated by Tom Langer, not a service open to public registration.</p>
+
+  <h2>Data accessed and purposes</h2>
+  <p>Only with the account owner's OAuth authorization, AIfred accesses Google account identity (email address and account identifier), Gmail messages and metadata for requested reading, search, summaries, and follow-up monitoring; calendar details and events for scheduling and availability; and Drive files or Sheets created by or explicitly selected for the app. Sending email and managing events on owned calendars require the corresponding permissions. Separate OAuth grants are used for email sending and selected-file access. It does not request Google passwords.</p>
+  <p>Data is used to carry out the owner's personal assistant requests and authorized scheduled tasks. Authorizing an integration does not authorize unrelated emails, invitations, sharing, or account changes.</p>
+
+  <h2>Storage and security</h2>
+  <p>OAuth credentials are kept in private, access-restricted storage separate from public website files. Relevant content and assistant outputs may be retained in private conversation history, task files, and operational logs. The public informational pages on tomlanger.com do not expose Google account data, credentials, or assistant conversations.</p>
+
+  <h2>Sharing and AI processing</h2>
+  <p>Relevant data may be processed by configured AI model providers and infrastructure or messaging providers to fulfill the owner's requested assistant features. The owner chooses the AI provider and should review its processing and retention terms before using a connection. This includes processing message or event content to produce a requested summary or action. AIfred does not sell Google user data, use it for advertising, or use it to train generalized AI models.</p>
+  <p>Access and transfer of Google user data are limited to providing the authorized features, security purposes, or applicable legal obligations. Google user data is not published on these pages.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Credentials are retained while the integration is configured. Conversation history, task artifacts, and logs may remain until removed by the owner; there is no automatic fixed deletion period represented by this policy. Revoking Google permission stops future authorized access but does not automatically delete previously retained copies. The owner can delete local credentials, histories, and task files, and contact the operator about deletion. External providers may retain processed information under their own applicable terms.</p>
+
+  <h2>Revoke access</h2>
+  <p>Remove AIfred's authorization at <a href="https://myaccount.google.com/connections">Google Account connections</a>. The owner can also disable the assistant's integration and scheduled tasks. Contact <a href="mailto:langer.tom7@gmail.com">langer.tom7@gmail.com</a> for privacy questions or deletion requests.</p>
+
+  <h2>Google API Limited Use</h2>
+  <p>AIfred's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Google Workspace data is not used to create, train, or improve generalized machine-learning or artificial-intelligence models.</p>
+  <p>Changes to data practices will be reflected here, with renewed consent when required.</p>
+  <p><a href="/aifred/">About AIfred</a></p>
+</BaseLayout>
+
+<style>
+  p + p, h2 { margin-top: 1.25rem; }
+  h2 { font-size: 1.15rem; }
+</style>
